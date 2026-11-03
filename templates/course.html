@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for course in courses %}
+    <h2>{{course.title}}</h2>
+    <h1>{{course.description}}</h1>
+    <h3>{{course.price}}</h3>
+    {% endfor %}
+</body>
+</html>

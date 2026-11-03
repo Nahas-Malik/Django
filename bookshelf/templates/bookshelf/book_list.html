@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Bookshelf</title>
+</head>
+<body>
+    <h1>Bookshelf Collection</h1>
+    <hr>
+    <ul>
+        {% for book in books %}
+            <li><strong>{{ book.title }}</strong> by {{ book.author }} (Published: {{ book.published_date }})</li>
+        {% empty %}
+            <li>No books in your library yet!</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

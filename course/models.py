@@ -1,44 +1,46 @@
 from django.db import models
-
-class Course(models.Model):
+class courses(models.Model):
     title=models.CharField(max_length=100)
-    price=models.DecimalField(
-        max_digits=8,
-        decimal_places=2
-    )
+    price=models.DecimalField(max_digits=8,decimal_places=3)
+    def str(self):
+        return self.title
 
+class student(models.Model):
 
-def __str__(self):
-return self.title
-
-class Student(models.Model):
-
-    name = models.CharField(
+    name=models.CharField(
         max_length=100,
         null=False,
         blank=False,
         unique=False,
-        default="Unknown"
+        default="unknown"
     )
 
-    email = models.EmailField(
-        unique=True
-    )
+    email=models.EmailField(unique=True)
 
-    age = models.IntegerField(
+    age=models.IntegerField(
         null=True,
         blank=True
     )
 
-    is_active = models.BooleanField(
-        default=True
+    is_active=models.BooleanField(default=True)
+
+class Course(models.Model):
+
+    title=models.CharField(max_length=100)
+
+    description=models.TextField()
+
+    price=models.DecimalField(
+        max_digits=8,decimal_places=3
     )
 
-class Post(models.Model):
-    title=models.CharField(max_length=200)
-    content=models.TextField()
-    created_at=models.DateTimeField(auto_now_add=True)
-    category=models.ForeignKey(Category, on_delete=models.CASCADE)
+    duration=models.IntegerField()
 
-    def __str__(self):
-        return self.title
+    is_published=models.BooleanField(default=True)
+
+    created_at=models.DateTimeField(
+        auto_now_add=True
+    )
+    updated_at=models.DateTimeField(
+        auto_now=True
+    )
