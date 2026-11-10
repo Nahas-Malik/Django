@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "course",
-    "bookshelf",  # <-- Add this line
-    "blog",       # <-- Add this line
+    "bookshelf",  
+    "blog",       
+    # "one_to_field", 
 ]
 
 
@@ -80,11 +81,14 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django_db',
+        'USER': 'postgres',
+        'PASSWORD': 'djangonahas',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/6.1/ref/settings/#auth-password-validators

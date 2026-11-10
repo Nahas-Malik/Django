@@ -20,5 +20,6 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("courses/",include("course.urls")),  # <-- Change 'home' to 'views.home'
-    path('books/', include('bookshelf.urls')),  # <-- Add this line
+    path('books/', include('bookshelf.urls')), 
+    path('one-to-field/', include('one_to_field.urls')), # <-- Add this line
 ]
