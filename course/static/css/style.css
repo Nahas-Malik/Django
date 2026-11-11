@@ -1,0 +1,15 @@
+.logout-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}

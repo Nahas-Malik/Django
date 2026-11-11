@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Dashboard</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
     <h2>Welcome, {{ request.user.username }}!</h2>
     <p>You are logged in.</p>
 
@@ -21,6 +20,5 @@
     </ul>
 
     <br>
-    <a href="{% url 'logout' %}">Logout</a>
-</body>
-</html>
+    <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+{% endblock %}
